@@ -1,1 +1,22 @@
-blog/index.html
+{% extends "blog/layout.html" %}
+
+{% block content %}
+    {{ block.super }}
+    {{ count }}
+
+    <ul>
+    {% for post in post_list %}
+        <li>
+            <a href="{% url "blog.views.detail" post.pk %}">
+                {{ post.title }}
+            </a>
+            <!--
+            <a href="/blog/{{ post.pk }}/">
+                {{ post.title }}
+            </a>
+            -->
+        </li>
+    {% endfor %}
+    </ul>
+
+{% endblock %}
