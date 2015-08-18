@@ -3,7 +3,7 @@
 
 ## 초기 django 프로젝트 생성
 ```sh
-python manage.py startproject pystagram
+python django-admin startproject pystagram
 cd pystagram
 ```
 
